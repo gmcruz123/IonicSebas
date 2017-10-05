@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../home/home';
+import { LoginSesionPage} from './login-sesion/login-sesion';
 import { Storage } from '@ionic/storage';
 
 @Component({
@@ -13,14 +13,12 @@ export class LoginPage {
     public navParams: NavParams,
     public storage: Storage) {
   }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-
   login() {
-    this.storage.set("logged", true);
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.push(LoginSesionPage);
   }
-
+  Facebookin(){}
+  
 }

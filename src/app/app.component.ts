@@ -3,15 +3,14 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Storage } from '@ionic/storage';
-
-import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+//import { TabsPage} from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any;
+  rootPage: any =  LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,
     public storage: Storage) {
@@ -20,7 +19,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      this.storage.get("logged").then(value=>this.rootPage = value? HomePage: LoginPage);
+     // this.storage.get("logged").then(value=>this.rootPage = value? HomePage: LoginPage);
     });
   }
 }

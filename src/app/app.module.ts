@@ -4,26 +4,44 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
+//import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
+import { LoginSesionPage } from '../pages/login/login-sesion/login-sesion';
 import { HomePage } from '../pages/home/home';
-import { HeladosPage } from '../pages/helados/helados';
-import { BebidasPage } from '../pages/bebidas/bebidas';
-import { AddHeladoPage } from '../pages/add-helado/add-helado';
-import { HeladosDataProvider } from '../providers/helados-data/helados-data';
+import { DatabaseConnectionProvider } from '../providers/database-connection/database-connection';
+import { TabsPage } from '../pages/tabs/tabs';
+import { ExplorarPage } from '../pages/explorar/explorar';
+import { SpecialPage } from '../pages/menu/special/special';
+import { MensajesPage } from '../pages/mensajes/mensajes';
+import { FavoritosPage } from '../pages/menu/favoritos/favoritos';
+import { ReservasPage } from '../pages/reservas/reservas';
+import { PerfilPage } from '../pages/menu/perfil/perfil';
+import { RegistroProvider } from '../providers/registro/registro';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { MenuPage } from '../pages/menu/menu';
 
+import { NgCalendarModule} from 'ionic2-calendar';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    HeladosPage,
-    BebidasPage,
-    AddHeladoPage,
-    LoginPage
+    LoginPage,
+    LoginSesionPage,
+    TabsPage,
+    MensajesPage,
+    FavoritosPage,
+    PerfilPage,
+    CalendarPage,
+    MenuPage,
+    ExplorarPage,
+    ReservasPage,
+    SpecialPage
   ],
   imports: [
     BrowserModule,
+    NgCalendarModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],
@@ -32,15 +50,24 @@ import { HeladosDataProvider } from '../providers/helados-data/helados-data';
     MyApp,
     HomePage,
     LoginPage,
-    HeladosPage,
-    AddHeladoPage,
-    BebidasPage
+    LoginSesionPage,
+    TabsPage,
+    MensajesPage,
+    ExplorarPage,
+    FavoritosPage,
+    ReservasPage,
+    PerfilPage,
+    CalendarPage,
+    MenuPage,
+    SpecialPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    HeladosDataProvider
+    DatabaseConnectionProvider,
+    //HttpClientModule,
+    RegistroProvider
   ]
 })
 export class AppModule { }

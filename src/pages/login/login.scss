@@ -1,30 +1,42 @@
 page-login {
-    .login-title{
-        font-family: freeScript;
-        color:white;
-        font-size: 5em;    }
-
-    .login-main{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+    .card-header{
+        font-size: 3em;
     }
-
-    .login-form{
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        justify-content: center;
-    }
-
     .login-bg{
-        background-image: url("../../assets/img/login_fondo.jpg");
-        background-repeat: no-repeat;
+        background-image: url("../../assets/img/Login.jpg");
+        background-size: 100% 100%;
         background-position: center;
-        background-size: cover;
     }
+    .scroll-content{
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    ion-card.card{
+            box-shadow: none;
+            background: rgba(0,0,0,0.6);
+            border-radius: 5px;
+    }
+    a,ion-card-header.card-header{
+        color:#fff;
+    }
+    .list> .item-block:first-child{
+        border:medium none;
+    }
+    .item{
+        margin-bottom: 10px;
+        background: rgba(255,255,255,0.5);
+        border: medium none;
+    }
+    
+	.icon {
+		padding-right: 10px;
+	}
 
-    .text-input-wp{
-        border-color: white;
-    }
+	.bottom {
+		position: absolute;
+		bottom: 0;
+	}
 }
