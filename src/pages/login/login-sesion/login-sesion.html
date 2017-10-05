@@ -1,0 +1,36 @@
+<ion-header>
+    
+      <ion-navbar color="primary">
+        <ion-title class="Titulo" color = "light"><q>No necesitas suerte, necesitas moverte</q></ion-title>
+      </ion-navbar>
+    
+    </ion-header>
+<ion-content padding class = "login">
+  <ion-card col-md-8 offset-md-2 col-lg-8 offset-lg-2 >
+      <ion-card-header class ="card-header">
+            Iniciar sesion 
+      </ion-card-header>
+
+    <ion-card-content>
+          <ion-list no-line>
+              <ion-item>
+                <ion-input ion-col col-12 col-md-10  col-lg-6 offset-lg-3
+                type = "text" placeholder = "Username" text-center
+                ></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input ion-col col-12 col-md-10  col-lg-6 offset-lg-3
+                 type = "password" placeholder = "Password" text-center
+                ></ion-input>
+              </ion-item>
+              <a>¿Has olvidado tu contraseña? <br> <b>Ingresa aquí para recuperar</b></a>
+              <ion-item>
+                    <button ion-col col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 ion-button
+                     block color="danger" (click)="login()" >Entrar</button>    
+              </ion-item>
+            </ion-list>
+            <button ion-button small (click)="myGoBack()" >Volver</button>            
+          </ion-card-content>
+    
+  </ion-card>
+</ion-content>

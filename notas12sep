@@ -1,0 +1,10 @@
+instalar JDK java
+instalar android Studio ir a:
+https://developer.android.com/studio/index.html
+para configurar el Path de Windos:
+VARIABLES DE ENTORNO:
+Panel de Control>Sistema>Configuracion Avanzado>Variables de Entorno
+instalar el JAVA_HOME
+Studio_home
+el Gradle_home
+instalar el JAVA_HOME
