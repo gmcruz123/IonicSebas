@@ -4,7 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
-//import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'
+
 
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
@@ -21,6 +22,7 @@ import { PerfilPage } from '../pages/menu/perfil/perfil';
 import { RegistroProvider } from '../providers/registro/registro';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { MenuPage } from '../pages/menu/menu';
+
 
 import { NgCalendarModule} from 'ionic2-calendar';
 @NgModule({
@@ -40,6 +42,7 @@ import { NgCalendarModule} from 'ionic2-calendar';
     SpecialPage
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     NgCalendarModule,
     IonicModule.forRoot(MyApp),
@@ -66,7 +69,7 @@ import { NgCalendarModule} from 'ionic2-calendar';
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     DatabaseConnectionProvider,
-    //HttpClientModule,
+  
     RegistroProvider
   ]
 })

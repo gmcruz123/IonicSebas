@@ -1,1 +1,2 @@
-export const URL ="https://rutag3-prueba.herokuapp.com"
+export const URL ="https://proyectoionic.herokuapp.com"
+//tomar del api...master heroku

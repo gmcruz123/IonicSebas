@@ -5,4 +5,5 @@ export class Cliente {
     id: number;
     nombre: String;
     email: String;
+    password:string
 }
