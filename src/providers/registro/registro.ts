@@ -16,17 +16,20 @@ export class RegistroProvider {
 
   
 
-  login(username:string,password:string){
+  login(username:string , password:string){
     let url = URL+"/users/login"
-    let req = {username , password}
+    let req = {username:username , password:password}
     return this.http.post<SimpleResponse>(url, req)
   }
 
-  insert(book:User){
+
+
+
+ /* insert(book:User){
     let url = URL+"/users/login"
     return this.http.post<SimpleResponse>(url, book)
   }
-
+*/
 
 
 
@@ -35,12 +38,12 @@ export class RegistroProvider {
 
 export class SimpleResponse{
 success:boolean;
-user:Cliente;
+user:User;
 }
 
 export class User {
   _id: string;
-  nombre:string;
-  autor:string;
-  paginas:number;  
+  username:string;
+  email:string;
+  password:string;  
 }

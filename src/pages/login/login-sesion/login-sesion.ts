@@ -27,14 +27,21 @@ export class LoginSesionPage {
     let loading =  this.loadingCtrl.create({content:"Cargando ..."});      
     loading.present();
 
-   this.entrar.insert(this.user,this.password).subscribe(res => {
+  
+   
+  this.entrar.login(this.user,this.password).subscribe(res => {
     if (res.success) {
-      this.showToast("Libro insertado !");
-      this.navCtrl.pop();
+      console.log(res.user);
+
+      this.showToast("Usuario encontrado "+res.user.username +"!");
+      loading.dismiss();
+      this.navCtrl.push(MenuPage);
     } else {
-      this.showToast("Error al insertar libro");
+      this.showToast("Usuario no encontrado");
     }
   });
+
+
 
 
   }
