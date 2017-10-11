@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {LoginSesionPage} from './login-sesion/login-sesion';
+import { LoginSesionPage} from './login-sesion/login-sesion';
 import { Storage } from '@ionic/storage';
-
+import { SigninPage } from '../signin/signin';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
@@ -13,12 +13,12 @@ export class LoginPage {
     public navParams: NavParams,
     public storage: Storage) {
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
+  
   login() {
     this.navCtrl.push(LoginSesionPage);
   }
   Facebookin(){}
-  
+  signin(){
+    this.navCtrl.push(SigninPage);
+  }
 }

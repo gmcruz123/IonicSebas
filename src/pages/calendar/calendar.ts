@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,AlertController,ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController,ModalController } from 'ionic-angular';
 import * as moment from 'moment';
 @IonicPage()
 @Component({

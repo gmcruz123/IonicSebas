@@ -1,7 +1,7 @@
 import  { Component } from '@angular/core';
 
 //import  { MensajesPage } from '../mensajes/mensajes';
-import  { ExplorarPage } from '../explorar/explorar';
+import  { ExplorarPage } from '../menu/explorar/explorar';
 import  { ReservasPage } from '../reservas/reservas';
 import  { CalendarPage } from '../calendar/calendar';
  //import  { FavoritosPage } from '../favoritos/favoritos';

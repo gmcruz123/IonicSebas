@@ -4,27 +4,29 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
-import { HttpClientModule } from '@angular/common/http'
 
+import { HttpClientModule } from '@angular/common/http'
 
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { LoginSesionPage } from '../pages/login/login-sesion/login-sesion';
+import { SigninPage } from '../pages/signin/signin';
 import { HomePage } from '../pages/home/home';
-import { DatabaseConnectionProvider } from '../providers/database-connection/database-connection';
 import { TabsPage } from '../pages/tabs/tabs';
-import { ExplorarPage } from '../pages/explorar/explorar';
+import { ExplorarPage } from '../pages/menu/explorar/explorar';
 import { SpecialPage } from '../pages/menu/special/special';
 import { MensajesPage } from '../pages/mensajes/mensajes';
 import { FavoritosPage } from '../pages/menu/favoritos/favoritos';
 import { ReservasPage } from '../pages/reservas/reservas';
 import { PerfilPage } from '../pages/menu/perfil/perfil';
-import { RegistroProvider } from '../providers/registro/registro';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { MenuPage } from '../pages/menu/menu';
 
-
+import { RegistroProvider } from '../providers/registro/registro';
+import { ReservasProvider } from '../providers/reservas/reservas';
 import { NgCalendarModule} from 'ionic2-calendar';
+import { DatabaseConnectionProvider } from '../providers/database-connection/database-connection';
+//import { DestinosDataProvider } from '../providers/models/destinos-data';
 @NgModule({
   declarations: [
     MyApp,
@@ -39,7 +41,8 @@ import { NgCalendarModule} from 'ionic2-calendar';
     MenuPage,
     ExplorarPage,
     ReservasPage,
-    SpecialPage
+    SpecialPage,
+    SigninPage
   ],
   imports: [
     HttpClientModule,
@@ -62,15 +65,17 @@ import { NgCalendarModule} from 'ionic2-calendar';
     PerfilPage,
     CalendarPage,
     MenuPage,
-    SpecialPage
+    SpecialPage,
+    SigninPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     DatabaseConnectionProvider,
-  
-    RegistroProvider
+  //  DestinosDataProvider,
+    RegistroProvider,
+    ReservasProvider
   ]
 })
 export class AppModule { }

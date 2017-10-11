@@ -1,0 +1,46 @@
+  <ion-header>    
+      <ion-navbar color="primary">
+        <button ion-button menuToggle icon-only > 
+          <ion-icon name="menu"></ion-icon>
+          </button>
+        <ion-title>Explorar</ion-title>
+      </ion-navbar>
+    </ion-header>
+<ion-content>
+    <ion-searchbar>Buscar</ion-searchbar>
+    <ion-content padding>
+            <ion-refresher (ionRefresh) = "doRefresh($event)">
+                <ion-refresher-content>
+                    pullingText = "Desliza para recargar"
+                    refreshText = "Recargando ..."
+                </ion-refresher-content>
+            </ion-refresher>
+    </ion-content>
+
+<!-- 
+    <ion-list col-12 col-md-12 col-lg-12 >
+        <ion-item *ngFor = "let d of data">
+            <img src = "{{d.imagen}}" alt = "">
+            <h2> <strong>{{d.nombre}}</strong></h2>
+            <div><ion-icon name="logo-usd"></ion-icon> Precio: {{d.precio}}</div>
+            <div><ion-icon name="people"></ion-icon> Me gusta: {{d.visitantes}}</div>
+        </ion-item>
+    </ion-list>
+
+     -->
+    <ion-col col-12 col-md-6 col-lg-4 *ngFor = "let d of data">
+        <ion-card>
+              <img src = "{{d.imagen}}" alt = "">
+              <ion-card-content>
+                  <ion-card-title>{{d.nombre}}</ion-card-title>
+                    <div><ion-icon name="logo-usd"></ion-icon> Precio: {{d.precio}}</div>
+                    <div><ion-icon name="people"></ion-icon> Me gusta: {{d.visitantes}}</div>
+      
+                           <button ion-button icon-only (click) = "Reserve()" full>
+                              <ion-icon menu="search"></ion-icon>
+                               Reservar
+                           </button>
+              </ion-card-content>
+        </ion-card>   
+    </ion-col>  
+</ion-content> 

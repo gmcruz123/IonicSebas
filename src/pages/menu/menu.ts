@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
 
-//import { ExplorarPage } from '../explorar/explorar';
+//import { ExplorarPage } from '../menu/explorar/explorar';
 import { PerfilPage } from '../menu/perfil/perfil';
 import { TabsPage } from '../tabs/tabs';
 // import { MensajesPage } from '../mensajes/mensajes';
@@ -17,6 +17,7 @@ export class MenuPage {
   
   root : any = TabsPage;
   menuOpc: Menu[] = [
+    { label: 'Seguir explorando', icon: 'menu'},
     { label: 'Perfil', icon: 'people' },
     { label: 'Favoritos', icon: 'star' },
     { label: 'special', icon: 'md-bicycle' },
@@ -32,9 +33,11 @@ export class MenuPage {
   
   setContent(index: number) {
     switch(index){
-      case 0: this.root = PerfilPage ; break;
-      case 1: this.root = FavoritosPage ; break; 
-      case 2: this.root = SpecialPage; break; 
+      
+      case 0: this.root = MenuPage ; break;
+      case 1: this.root = PerfilPage ; break;
+      case 2: this.root = FavoritosPage ; break; 
+      case 3: this.root = SpecialPage; break; 
   };
  }
 

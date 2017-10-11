@@ -1,27 +1,33 @@
-<ion-header>
-    
+<ion-header>    
       <ion-navbar color="primary">
         <ion-title class="Titulo" color = "light"><q>No necesitas suerte, necesitas moverte</q></ion-title>
       </ion-navbar>
-    
     </ion-header>
-<ion-content padding class="login-bg">
-      <ion-card col-md-6 offset-md-3 col-lg-6 offset-lg-3 >
-            <ion-card-header class ="card-header">
-                LaRutaG 
-          </ion-card-header>
-          <ion-card-content>
-                <ion-list no-line>
-                    <ion-item>
-                        <button col-12 col-md-7 offset-md-3 col-lg-4 offset-lg-4 ion-button block color ="facebook">
-                          <ion-icon name ="logo-facebook" (click)="Facebookin()"> </ion-icon> Login con Facebook
+    <ion-content padding class="login-bg">
+        <!-- Login-main permite el despliegue vertical -->
+        <div class="login-main"> 
+              <h1 class="login-title" text-center>LaRutaG</h1>
+              <!-- Login-form permite el contenido que se expande -->
+              <div class="login-form">
+                <!-- Modelo de grilla: -->
+                <ion-row>
+                  <ion-col ion-col col-12 col-md-6 offset-md-3  col-lg-6 offset-lg-3>
+                    <ion-item color="itemLight">
+                        <button ion-col col-12 col-md-10 offset-md-1  col-lg-6 offset-lg-3 
+                                ion-button block color ="facebook">
+                                <ion-icon name ="logo-facebook" (click)="Facebookin()"> 
+                                </ion-icon> Login con Facebook
+                        </button> 
+                        <br>
+                        <button  ion-col col-12 col-md-10 offset-md-1  col-lg-6 offset-lg-3
+                                ion-button block color="danger" (click)="login()">Inicia Sesión
                         </button>
-                    </ion-item>          
-                    <ion-item>
-                          <button  col-12 col-md-7 offset-md-3 col-lg-4 offset-lg-4 ion-button block outline color="light" (click)="login()">Inicia Sesión</button>    
+                        <br>  
+                        <button ion-col col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 
+                        ion-button clear (click) = "signin()" >Registrate</button>  
                     </ion-item>
-                  </ion-list>
-          </ion-card-content>
-  </ion-card>
-  <button ion-button outline color ="Secondary"> ¿No tienes una cuenta? Regístrate aquí</button>
-</ion-content>
+                  </ion-col>
+                </ion-row>
+              </div>
+            </div>
+      </ion-content>
