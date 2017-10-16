@@ -16,9 +16,10 @@ export class ReservasProvider {
         let url = URL+"/reservas"
         return this.http.get<Destinos[]>(url)
     }
-    AgregarReserva(DestinosID: Destinos ,usuarioid: User){
-        let urlfinal = URL + "/reservas"+ "/"+usuarioid;
-        return this.http.post<SimpleResponse>(urlfinal,DestinosID);
+    AgregarReserva(DestinosID: Destinos , usuarioid: User){
+        let urlfinal = URL + "/reservas"+ "/"+ DestinosID;
+        //let urlfinal = URL + "/reservas";
+        return this.http.post<SimpleResponse>(urlfinal, DestinosID, usuarioid);
     }
 }
 export class SimpleResponse {
@@ -30,7 +31,9 @@ export class Destinos {
         public _id: string,
         public nombre: string,
         public visitantes: number,
+       // public fecha: Date,
         public precio: number,
-        public imagen: string) { }
+        public imagen: string,
+        public usuario:string ) { }
 }
     

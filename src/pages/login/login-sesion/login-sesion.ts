@@ -15,7 +15,6 @@ export class LoginSesionPage {
   user: string
   password: string
   
-  
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public entrar: RegistroProvider,
               public toastCtrl: ToastController,
