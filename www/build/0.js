@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 423:
+/***/ 422:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EventModalPageModule", function() { return EventModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__event_modal__ = __webpack_require__(424);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__event_modal__ = __webpack_require__(423);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ EventModalPageModule = __decorate([
 
 /***/ }),
 
-/***/ 424:
+/***/ 423:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80,7 +80,7 @@ var EventModalPage = (function () {
 }());
 EventModalPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-event-modal',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\event-modal\event-modal.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n      <ion-buttons start>\n\n        <button ion-button icon-only (click)="cancel()">\n\n          <ion-icon name="close"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n      <ion-title>Event Details</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n   \n\n  <ion-content>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-input type="text" placeholder="Title" [(ngModel)]="event.title"></ion-input>\n\n      </ion-item>\n\n   \n\n      <ion-item>\n\n        <ion-label>Start</ion-label>\n\n        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.startTime" [min]="minDate"></ion-datetime>\n\n      </ion-item>\n\n   \n\n      <ion-item>\n\n        <ion-label>End</ion-label>\n\n        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.endTime" [min]="minDate"></ion-datetime>\n\n      </ion-item>\n\n   \n\n      <ion-item>\n\n        <ion-label>All Day?</ion-label>\n\n        <ion-checkbox [(ngModel)]="event.allDay"></ion-checkbox>\n\n      </ion-item>\n\n    </ion-list>\n\n   \n\n    <button ion-button full icon-left (click)="save()">\n\n      <ion-icon name="checkmark"></ion-icon> Add Event\n\n    </button>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\event-modal\event-modal.html"*/,
+        selector: 'page-event-modal',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\event-modal\event-modal.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n      <ion-buttons start>\n\n        <button ion-button icon-only (click)="cancel()">\n\n          <ion-icon name="close"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n      <ion-title>Event Details</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n   \n\n  <ion-content>\n\n    <ion-list>\n\n      <ion-item>\n\n        <ion-input type="text" placeholder="Title" [(ngModel)]="event.title"></ion-input>\n\n      </ion-item>\n\n   \n\n      <ion-item>\n\n        <ion-label>Start</ion-label>\n\n        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.startTime" [min]="minDate"></ion-datetime>\n\n      </ion-item>\n\n   \n\n      <ion-item>\n\n        <ion-label>End</ion-label>\n\n        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" pickerFormat="MMM D:HH:mm" [(ngModel)]="event.endTime" [min]="minDate"></ion-datetime>\n\n      </ion-item>\n\n   \n\n      <ion-item>\n\n        <ion-label>All Day?</ion-label>\n\n        <ion-checkbox [(ngModel)]="event.allDay"></ion-checkbox>\n\n      </ion-item>\n\n    </ion-list>\n\n   \n\n    <button ion-button full icon-left (click)="save()">\n\n      <ion-icon name="checkmark"></ion-icon> Add Event\n\n    </button>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\event-modal\event-modal.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ViewController */]])
 ], EventModalPage);

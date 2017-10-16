@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 // import 'rxjs/add/operator/map';
 // import 'rxjs/add/operator/catch';
+import { User } from '../registro/registro';
 import { URL } from '../../app/app.config';
 //import { Observable } from 'rxjs/Observable';
 @Injectable()
@@ -15,8 +16,9 @@ export class ReservasProvider {
         let url = URL+"/reservas"
         return this.http.get<Destinos[]>(url)
     }
-    insert(destino:Destinos){
-        return this.http.post<SimpleResponse>(URL, destino);
+    AgregarReserva(DestinosID: Destinos ,usuarioid: User){
+        let urlfinal = URL + "/reservas"+ "/"+usuarioid;
+        return this.http.post<SimpleResponse>(urlfinal,DestinosID);
     }
 }
 export class SimpleResponse {
@@ -25,6 +27,7 @@ export class SimpleResponse {
 }
 export class Destinos {
     constructor(
+        public _id: string,
         public nombre: string,
         public visitantes: number,
         public precio: number,

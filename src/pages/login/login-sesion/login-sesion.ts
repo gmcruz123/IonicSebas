@@ -4,7 +4,8 @@ import { NavController, NavParams, ToastController, LoadingController } from 'io
 //import { LoginPage } from '../../login/login';
 import { MenuPage } from '../../menu/menu';
 import { RegistroProvider } from '../../../providers/registro/registro';
-
+//Para almacenamiento local:
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'page-login-sesion',
   templateUrl: 'login-sesion.html',
@@ -14,32 +15,37 @@ export class LoginSesionPage {
   user: string
   password: string
   
+  
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public entrar: RegistroProvider,
               public toastCtrl: ToastController,
-              public loadingCtrl: LoadingController) {
+              public loadingCtrl: LoadingController,
+              public guardar: Storage) {
   }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginSesionPage');
   }
 
   login(){
+    
     let loading =  this.loadingCtrl.create({content:"Cargando ..."});      
     loading.present();
 
   this.entrar.login(this.user, this.password).subscribe(res => {
     if (res.success) {
       console.log(res.user);
-      this.showToast(" Hola "+res.user.username +"!");
+      this.showToast(" Hola "+ res.user.username +"!");
       loading.dismiss();
       this.navCtrl.push(MenuPage);
+      //Almacenamos localmente el identificador del usuario en sesión
+      this.guardar.set('identificacion', res.user._id);
     } else {
       this.showToast("Usuario no encontrado");
       loading.dismiss();
     }
   });
   }
-  
   
   showToast(msg: string) {
     let toast = this.toastCtrl.create({

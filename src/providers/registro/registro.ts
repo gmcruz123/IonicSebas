@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 //import {Cliente} from '../models/cliente'
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-
 //import { Observable } from 'rxjs/Observable';
 import { URL} from '../../app/app.config';
 
@@ -11,13 +10,15 @@ import { URL} from '../../app/app.config';
 export class RegistroProvider {
 
   constructor(public http: HttpClient) {
-    console.log('Se ha realizado la conexión al servidor exitosamente');
+    console.log('1. Conexión a HttpCliente exitoso');
   }
+
   login(username:string , password:string){
     let url = URL+"/users/login"
     let req = {username:username , password:password}
     return this.http.post<SimpleResponse>(url, req)
   }
+
   signin(email: string, username: string, password: string){
     let dir = URL + "/users/signin" 
     let req = {email:email, username: username, password:password}
@@ -26,8 +27,8 @@ export class RegistroProvider {
 }
 
 export class SimpleResponse{
-success:boolean;
-user:User;
+    success:boolean;
+    user:User;
 }
 
 export class User {

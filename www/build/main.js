@@ -8,7 +8,7 @@ webpackJsonp([2],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_sesion_login_sesion__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__signin_signin__ = __webpack_require__(326);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,7 +41,7 @@ var LoginPage = (function () {
 }());
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\login\login.html"*/'<ion-header>    \n\n      <ion-navbar color="primary">\n\n        <ion-title class="Titulo" color = "light"><q>No necesitas suerte, necesitas moverte</q></ion-title>\n\n      </ion-navbar>\n\n    </ion-header>\n\n    <ion-content padding class="login-bg">\n\n        <!-- Login-main permite el despliegue vertical -->\n\n        <div class="login-main"> \n\n              <h1 class="login-title" text-center>LaRutaG</h1>\n\n              <!-- Login-form permite el contenido que se expande -->\n\n              <div class="login-form">\n\n                <!-- Modelo de grilla: -->\n\n                <ion-row>\n\n                  <ion-col ion-col col-12 col-md-6 offset-md-3  col-lg-6 offset-lg-3>\n\n                    <ion-item color="itemLight">\n\n                        <button ion-col col-12 col-md-10 offset-md-1  col-lg-6 offset-lg-3 \n\n                                ion-button block color ="facebook">\n\n                                <ion-icon name ="logo-facebook" (click)="Facebookin()"> \n\n                                </ion-icon> Login con Facebook\n\n                        </button> \n\n                        <br>\n\n                        <button  ion-col col-12 col-md-10 offset-md-1  col-lg-6 offset-lg-3\n\n                                ion-button block color="danger" (click)="login()">Inicia Sesión\n\n                        </button>\n\n                        <br>  \n\n                        <button ion-col col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 \n\n                        ion-button clear (click) = "signin()" >Registrate</button>  \n\n                    </ion-item>\n\n                  </ion-col>\n\n                </ion-row>\n\n              </div>\n\n            </div>\n\n      </ion-content>'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\login\login.html"*/,
+        selector: 'page-login',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\login\login.html"*/'<ion-header>    \n\n      <ion-navbar color="primary">\n\n        <ion-title class="Titulo" color = "light"><q>No necesitas suerte, necesitas moverte</q></ion-title>\n\n      </ion-navbar>\n\n    </ion-header>\n\n    <ion-content padding class="login-bg">\n\n        <!-- Login-main permite el despliegue vertical -->\n\n        <div class="login-main"> \n\n              <h1 class="login-title" text-center>LaRutaG</h1>\n\n              <!-- Login-form permite el contenido que se expande -->\n\n              <div class="login-form">\n\n                <!-- Modelo de grilla: -->\n\n                <ion-row>\n\n                  <ion-col ion-col col-12 col-md-6 offset-md-3  col-lg-6 offset-lg-3>\n\n                    <ion-item color="itemLight">\n\n                        <button ion-col col-12 col-md-10 offset-md-1  col-lg-6 offset-lg-3 \n\n                                ion-button block color ="facebook">\n\n                                <ion-icon name ="logo-facebook" (click)="Facebookin()"> \n\n                                </ion-icon> Login con Facebook\n\n                        </button> \n\n                        <br>\n\n                        <button  ion-col col-12 col-md-10 offset-md-1  col-lg-6 offset-lg-3\n\n                                ion-button block color="danger" (click)="login()">Inicia Sesión\n\n                        </button>\n\n                        <br>  \n\n                        <button ion-col col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 \n\n                        ion-button clear (click) = "signin()" >Registrate</button>  \n\n                    </ion-item>\n\n                  </ion-col>\n\n                </ion-row>\n\n              </div>\n\n            </div>\n\n      </ion-content>'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\login\login.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -126,7 +126,7 @@ var MenuPage = MenuPage_1 = (function () {
 }());
 MenuPage = MenuPage_1 = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-menu',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\menu\menu.html"*/'<ion-split-pane when="lg">\n\n    <ion-menu [content]="content">\n\n      \n\n      <ion-list no-lines>\n\n        <ion-list-header>Menu</ion-list-header>\n\n        <button menuClose ion-item *ngFor="let m of menuOpc; index as i" (click)="setContent(i)"> \n\n          <ion-icon [name]="m.icon" margin-right></ion-icon> {{m.label}}\n\n        </button>\n\n        <ion-list-header>Perfil</ion-list-header>\n\n        <button ion-item (click)="logout()"> <ion-icon name="md-exit" margin-right></ion-icon>Cerrar Sesion</button>\n\n      </ion-list>\n\n  \n\n    </ion-menu>\n\n    <ion-nav [root]="root" main #content></ion-nav>\n\n  </ion-split-pane>'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\menu\menu.html"*/,
+        selector: 'page-menu',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\menu\menu.html"*/'<ion-split-pane when="lg">\n\n    <ion-menu [content]="content">\n\n      \n\n      <ion-list no-lines>\n\n        <ion-list-header>Menu</ion-list-header>\n\n        <button menuClose ion-item *ngFor="let m of menuOpc; index as i" (click)="setContent(i)"> \n\n          <ion-icon [name]="m.icon" margin-right></ion-icon> {{m.label}}\n\n        </button>\n\n        <ion-list-header>Perfil</ion-list-header>\n\n        <button ion-item (click)="logout()"> <ion-icon name="md-exit" margin-right></ion-icon>Cerrar Sesion</button>\n\n      </ion-list>\n\n  \n\n    </ion-menu>\n\n    <ion-nav [root]="root" main #content></ion-nav>\n\n  </ion-split-pane>'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\menu\menu.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -171,7 +171,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var RegistroProvider = (function () {
     function RegistroProvider(http) {
         this.http = http;
-        console.log('Se ha realizado la conexión al servidor exitosamente');
+        console.log('1. Conexión a HttpCliente exitoso');
     }
     RegistroProvider.prototype.login = function (username, password) {
         var url = __WEBPACK_IMPORTED_MODULE_4__app_app_config__["a" /* URL */] + "/users/login";
@@ -187,7 +187,7 @@ var RegistroProvider = (function () {
 }());
 RegistroProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
 ], RegistroProvider);
 
 var SimpleResponse = (function () {
@@ -202,6 +202,7 @@ var User = (function () {
     return User;
 }());
 
+var _a;
 //# sourceMappingURL=registro.js.map
 
 /***/ }),
@@ -277,7 +278,7 @@ var CalendarPage = (function () {
 }());
 CalendarPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-calendar',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\calendar\calendar.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n            <button ion-button menuToggle icon-only>\n\n            <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n      <ion-title>\n\n        {{ viewTitle }}\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-only (click)="addEvent()">\n\n          <ion-icon name="add"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n   \n\n  <ion-content>\n\n  <calendar [eventSource]="eventSource"\n\n          [calendarMode]="calendar.mode"\n\n          [currentDate]="calendar.currentDate"\n\n          (onEventSelected)="onEventSelected($event)"\n\n          (onTitleChanged)="onViewTitleChanged($event)"\n\n          (onTimeSelected)="onTimeSelected($event)"\n\n          step="30"\n\n          class="calendar">\n\n        </calendar>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\calendar\calendar.html"*/,
+        selector: 'page-calendar',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\calendar\calendar.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n            <button ion-button menuToggle icon-only>\n\n            <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n      <ion-title>\n\n        {{ viewTitle }}\n\n      </ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-only (click)="addEvent()">\n\n          <ion-icon name="add"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n   \n\n  <ion-content>\n\n  <calendar [eventSource]="eventSource"\n\n          [calendarMode]="calendar.mode"\n\n          [currentDate]="calendar.currentDate"\n\n          (onEventSelected)="onEventSelected($event)"\n\n          (onTitleChanged)="onViewTitleChanged($event)"\n\n          (onTimeSelected)="onTimeSelected($event)"\n\n          step="30"\n\n          class="calendar">\n\n        </calendar>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\calendar\calendar.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
 ], CalendarPage);
@@ -308,12 +309,16 @@ webpackEmptyAsyncContext.id = 118;
 
 var map = {
 	"../pages/calendar/calendar.module": [
-		422,
-		1
+		421,
+		6
+	],
+	"../pages/detalle/detalle.module": [
+		424,
+		5
 	],
 	"../pages/event-modal/event-modal.module": [
-		423,
-		0
+		422,
+		4
 	]
 };
 function webpackAsyncContext(req) {
@@ -341,6 +346,7 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__menu_menu__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_registro_registro__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(45);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -356,13 +362,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 //import { LoginPage } from '../../login/login';
 
 
+//Para almacenamiento local:
+
 var LoginSesionPage = (function () {
-    function LoginSesionPage(navCtrl, navParams, entrar, toastCtrl, loadingCtrl) {
+    function LoginSesionPage(navCtrl, navParams, entrar, toastCtrl, loadingCtrl, guardar) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.entrar = entrar;
         this.toastCtrl = toastCtrl;
         this.loadingCtrl = loadingCtrl;
+        this.guardar = guardar;
     }
     LoginSesionPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad LoginSesionPage');
@@ -377,6 +386,8 @@ var LoginSesionPage = (function () {
                 _this.showToast(" Hola " + res.user.username + "!");
                 loading.dismiss();
                 _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__menu_menu__["a" /* MenuPage */]);
+                //Almacenamos localmente el identificador del usuario en sesión
+                _this.guardar.set('identificacion', res.user._id);
             }
             else {
                 _this.showToast("Usuario no encontrado");
@@ -396,12 +407,13 @@ var LoginSesionPage = (function () {
 }());
 LoginSesionPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login-sesion',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\login\login-sesion\login-sesion.html"*/'<ion-header>\n\n    \n\n      <ion-navbar color="primary">\n\n        <ion-title class="Titulo" color = "light"><q>No necesitas suerte, necesitas moverte</q></ion-title>\n\n      </ion-navbar>\n\n    \n\n    </ion-header>\n\n<ion-content padding class = "login">\n\n  <ion-card col-md-8 offset-md-2 col-lg-8 offset-lg-2 >\n\n      <ion-card-header class ="card-header">\n\n            Iniciar sesion \n\n      </ion-card-header>\n\n\n\n    <ion-card-content>\n\n          <ion-list no-line>\n\n              <ion-item>\n\n                <ion-input ion-col col-12 col-md-10  col-lg-6 offset-lg-3\n\n                type = "text" placeholder = "Username" text-center [(ngModel)]="user"\n\n                ></ion-input>\n\n              </ion-item>\n\n              <ion-item>\n\n                <ion-input ion-col col-12 col-md-10  col-lg-6 offset-lg-3\n\n                 type = "password" placeholder = "Password" text-center [(ngModel)]="password"\n\n                ></ion-input>\n\n              </ion-item>\n\n              <a>¿Has olvidado tu contraseña? <br> <b>Ingresa aquí para recuperar</b></a>\n\n              <ion-item>\n\n                    <button ion-col col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 ion-button\n\n                     block color="danger" (click)="login()" >Entrar</button>    \n\n              </ion-item>\n\n            </ion-list>\n\n                     \n\n          </ion-card-content>\n\n    \n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\login\login-sesion\login-sesion.html"*/,
+        selector: 'page-login-sesion',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\login\login-sesion\login-sesion.html"*/'<ion-header>\n\n    \n\n      <ion-navbar color="primary">\n\n        <ion-title class="Titulo" color = "light"><q>No necesitas suerte, necesitas moverte</q></ion-title>\n\n      </ion-navbar>\n\n    \n\n    </ion-header>\n\n<ion-content padding class = "login">\n\n  <ion-card col-md-8 offset-md-2 col-lg-8 offset-lg-2 >\n\n      <ion-card-header class ="card-header">\n\n            Iniciar sesion \n\n      </ion-card-header>\n\n\n\n    <ion-card-content>\n\n          <ion-list no-line>\n\n              <ion-item>\n\n                <ion-input ion-col col-12 col-md-10  col-lg-6 offset-lg-3\n\n                type = "text" placeholder = "Username" text-center [(ngModel)]="user"\n\n                ></ion-input>\n\n              </ion-item>\n\n              <ion-item>\n\n                <ion-input ion-col col-12 col-md-10  col-lg-6 offset-lg-3\n\n                 type = "password" placeholder = "Password" text-center [(ngModel)]="password"\n\n                ></ion-input>\n\n              </ion-item>\n\n              <a>¿Has olvidado tu contraseña? <br> <b>Ingresa aquí para recuperar</b></a>\n\n              <ion-item>\n\n                    <button ion-col col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 ion-button\n\n                     block color="danger" (click)="login()" >Entrar</button>    \n\n              </ion-item>\n\n            </ion-list>\n\n                     \n\n          </ion-card-content>\n\n    \n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\login\login-sesion\login-sesion.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_3__providers_registro_registro__["a" /* RegistroProvider */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */]])
 ], LoginSesionPage);
 
 //# sourceMappingURL=login-sesion.js.map
@@ -438,7 +450,7 @@ var PerfilPage = (function () {
 }());
 PerfilPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-perfil',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\menu\perfil\perfil.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color = "primary">\n\n      <button ion-button menuToggle icon-only>\n\n          <ion-icon name = "menu"></ion-icon>     \n\n      </button>\n\n        <ion-title>Perfil</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\menu\perfil\perfil.html"*/,
+        selector: 'page-perfil',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\menu\perfil\perfil.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color = "primary">\n\n      <button ion-button menuToggle icon-only>\n\n          <ion-icon name = "menu"></ion-icon>     \n\n      </button>\n\n        <ion-title>Perfil</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\menu\perfil\perfil.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], PerfilPage);
@@ -486,7 +498,7 @@ var TabsPage = (function () {
 }());
 TabsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\tabs\tabs.html"*/'     \n\n<ion-tabs>\n\n  <ion-tab [root]="explorarPage" tabTitle = "Explorar" tabIcon = "ios-eye" ></ion-tab>\n\n  <ion-tab [root]="reservasPage" tabTitle = "Reservas" tabIcon = "ios-book" ></ion-tab>\n\n  <ion-tab [root]="calendarPage" tabTitle = "Calendario"tabIcon= "ios-calendar"></ion-tab>\n\n  <!-- <ion-tab [root]="favoritosPage"tabTitle = "Favoritos"tabIcon = "ios-star-half-outline" ></ion-tab>\n\n  <ion-tab [root]="rootexit"     tabTitle = "Salir"    tabIcon = "ios-exit" ></ion-tab> -->\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\tabs\tabs.html"*/,
+        selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\tabs\tabs.html"*/'     \n\n<ion-tabs>\n\n  <ion-tab [root]="explorarPage" tabTitle = "Explorar" tabIcon = "ios-eye" ></ion-tab>\n\n  <ion-tab [root]="reservasPage" tabTitle = "Reservas" tabIcon = "ios-book" ></ion-tab>\n\n  <ion-tab [root]="calendarPage" tabTitle = "Calendario"tabIcon= "ios-calendar"></ion-tab>\n\n  <!-- <ion-tab [root]="favoritosPage"tabTitle = "Favoritos"tabIcon = "ios-star-half-outline" ></ion-tab>\n\n  <ion-tab [root]="rootexit"     tabTitle = "Salir"    tabIcon = "ios-exit" ></ion-tab> -->\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\tabs\tabs.html"*/,
     })
 ], TabsPage);
 
@@ -501,7 +513,9 @@ TabsPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExplorarPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_reservas_reservas__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__detalle_detalle__ = __webpack_require__(425);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_reservas_reservas__ = __webpack_require__(321);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -513,15 +527,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 //import { DestinosDataProvider } from '../../../providers/models/destinos-data';
 
 var ExplorarPage = (function () {
-    function ExplorarPage(navCtrl, navParams, service) {
+    // DestinoID: string
+    function ExplorarPage(navCtrl, navParams, service, guardado) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.service = service;
+        this.guardado = guardado;
+        //Para mostrar Destinos en pantalla de  Explorer
         this.data = [];
-        //      this.data = LocalService.data; 
+        //   this.DestinoID = navParams.get('DestinoID');
     }
     ExplorarPage.prototype.ionViewDidLoad = function () {
         this.loadDestinos();
@@ -538,19 +557,19 @@ var ExplorarPage = (function () {
     ExplorarPage.prototype.doRefresh = function (refresher) {
         this.loadDestinos(refresher);
     };
-    ExplorarPage.prototype.Reserve = function () {
+    ExplorarPage.prototype.detalle = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__detalle_detalle__["a" /* DetallePage */]);
     };
     return ExplorarPage;
 }());
 ExplorarPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-explorar',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\menu\explorar\explorar.html"*/'  <ion-header>    \n\n      <ion-navbar color="primary">\n\n        <button ion-button menuToggle icon-only > \n\n          <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n        <ion-title>Explorar</ion-title>\n\n      </ion-navbar>\n\n    </ion-header>\n\n<ion-content>\n\n    <ion-searchbar>Buscar</ion-searchbar>\n\n    <ion-content padding>\n\n            <ion-refresher (ionRefresh) = "doRefresh($event)">\n\n                <ion-refresher-content>\n\n                    pullingText = "Desliza para recargar"\n\n                    refreshText = "Recargando ..."\n\n                </ion-refresher-content>\n\n            </ion-refresher>\n\n    </ion-content>\n\n\n\n<!-- \n\n    <ion-list col-12 col-md-12 col-lg-12 >\n\n        <ion-item *ngFor = "let d of data">\n\n            <img src = "{{d.imagen}}" alt = "">\n\n            <h2> <strong>{{d.nombre}}</strong></h2>\n\n            <div><ion-icon name="logo-usd"></ion-icon> Precio: {{d.precio}}</div>\n\n            <div><ion-icon name="people"></ion-icon> Me gusta: {{d.visitantes}}</div>\n\n        </ion-item>\n\n    </ion-list>\n\n\n\n     -->\n\n    <ion-col col-12 col-md-6 col-lg-4 *ngFor = "let d of data">\n\n        <ion-card>\n\n              <img src = "{{d.imagen}}" alt = "">\n\n              <ion-card-content>\n\n                  <ion-card-title>{{d.nombre}}</ion-card-title>\n\n                    <div><ion-icon name="logo-usd"></ion-icon> Precio: {{d.precio}}</div>\n\n                    <div><ion-icon name="people"></ion-icon> Me gusta: {{d.visitantes}}</div>\n\n      \n\n                           <button ion-button icon-only (click) = "Reserve()" full>\n\n                              <ion-icon menu="search"></ion-icon>\n\n                               Reservar\n\n                           </button>\n\n              </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>  \n\n</ion-content> '/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\menu\explorar\explorar.html"*/,
+        selector: 'page-explorar',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\menu\explorar\explorar.html"*/'  <ion-header>    \n\n      <ion-navbar color="primary">\n\n        <button ion-button menuToggle icon-only > \n\n          <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n        <ion-title>Explorar</ion-title>\n\n      </ion-navbar>\n\n    </ion-header>\n\n<ion-content>\n\n    <ion-searchbar>Buscar</ion-searchbar>\n\n    \n\n            <ion-refresher (ionRefresh) = "doRefresh($event)">\n\n                <ion-refresher-content>\n\n                    pullingText = "Desliza para recargar"\n\n                    refreshText = "Recargando ..."\n\n                </ion-refresher-content>\n\n            </ion-refresher>\n\n    \n\n    <ion-col col-12 col-md-6 col-lg-4 *ngFor = "let d of data">\n\n        <ion-card>\n\n              <img src = "{{d.imagen}}" alt = "">\n\n              <ion-card-content>\n\n                  <ion-card-title>{{d.nombre}}</ion-card-title>\n\n                    <div><ion-icon name="logo-usd"></ion-icon> Precio: {{d.precio}}</div>\n\n                    <div><ion-icon name="people"></ion-icon> Me gusta: {{d.visitantes}}</div>\n\n      \n\n                           <button ion-button icon-only (click) = "detalle()" full>\n\n                              <ion-icon menu="search"></ion-icon>\n\n                               Reservar\n\n                           </button>\n\n              </ion-card-content>\n\n        </ion-card>   \n\n    </ion-col>  \n\n</ion-content> \n\n            \n\n<!-- \n\n    <ion-list col-12 col-md-12 col-lg-12 >\n\n        <ion-item *ngFor = "let d of data">\n\n            <img src = "{{d.imagen}}" alt = "">\n\n            <h2> <strong>{{d.nombre}}</strong></h2>\n\n            <div><ion-icon name="logo-usd"></ion-icon> Precio: {{d.precio}}</div>\n\n            <div><ion-icon name="people"></ion-icon> Me gusta: {{d.visitantes}}</div>\n\n        </ion-item>\n\n    </ion-list>\n\n\n\n     -->\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\menu\explorar\explorar.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__providers_reservas_reservas__["a" /* ReservasProvider */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__providers_reservas_reservas__["a" /* ReservasProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_reservas_reservas__["a" /* ReservasProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _d || Object])
 ], ExplorarPage);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=explorar.js.map
 
 /***/ }),
@@ -576,8 +595,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-// import 'rxjs/add/operator/map';
-// import 'rxjs/add/operator/catch';
 
 //import { Observable } from 'rxjs/Observable';
 var ReservasProvider = (function () {
@@ -589,14 +606,15 @@ var ReservasProvider = (function () {
         var url = __WEBPACK_IMPORTED_MODULE_2__app_app_config__["a" /* URL */] + "/reservas";
         return this.http.get(url);
     };
-    ReservasProvider.prototype.insert = function (destino) {
-        return this.http.post(__WEBPACK_IMPORTED_MODULE_2__app_app_config__["a" /* URL */], destino);
+    ReservasProvider.prototype.AgregarReserva = function (DestinosID, usuarioid) {
+        var urlfinal = __WEBPACK_IMPORTED_MODULE_2__app_app_config__["a" /* URL */] + "/reservas" + "/" + usuarioid;
+        return this.http.post(urlfinal, DestinosID);
     };
     return ReservasProvider;
 }());
 ReservasProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
 ], ReservasProvider);
 
 var SimpleResponse = (function () {
@@ -606,7 +624,8 @@ var SimpleResponse = (function () {
 }());
 
 var Destinos = (function () {
-    function Destinos(nombre, visitantes, precio, imagen) {
+    function Destinos(_id, nombre, visitantes, precio, imagen) {
+        this._id = _id;
         this.nombre = nombre;
         this.visitantes = visitantes;
         this.precio = precio;
@@ -615,6 +634,7 @@ var Destinos = (function () {
     return Destinos;
 }());
 
+var _a;
 //# sourceMappingURL=reservas.js.map
 
 /***/ }),
@@ -660,7 +680,7 @@ var ReservasPage = (function () {
 }());
 ReservasPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-reservas',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\reservas\reservas.html"*/'<ion-header>\n\n    \n\n      <ion-navbar color="primary">\n\n        <button ion-button menuToggle icon-only > \n\n          <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n        <ion-title>Reservas</ion-title>\n\n      </ion-navbar>\n\n    \n\n    </ion-header>\n\n\n\n<ion-content padding>\n\nadfhsdhsdfv\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\reservas\reservas.html"*/,
+        selector: 'page-reservas',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\reservas\reservas.html"*/'<ion-header>\n\n    \n\n      <ion-navbar color="primary">\n\n        <button ion-button menuToggle icon-only > \n\n          <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n        <ion-title>Reservas</ion-title>\n\n      </ion-navbar>\n\n    \n\n    </ion-header>\n\n\n\n<ion-content padding>\n\nadfhsdhsdfv\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\reservas\reservas.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], ReservasPage);
@@ -699,7 +719,7 @@ var FavoritosPage = (function () {
 }());
 FavoritosPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-favoritos',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\menu\favoritos\favoritos.html"*/'<ion-header>\n\n    \n\n      <ion-navbar color="primary">\n\n        <button ion-button menuToggle icon-only > \n\n          <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n        <ion-title>Favoritos</ion-title>\n\n      </ion-navbar>\n\n    \n\n    </ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\menu\favoritos\favoritos.html"*/,
+        selector: 'page-favoritos',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\menu\favoritos\favoritos.html"*/'<ion-header>\n\n    \n\n      <ion-navbar color="primary">\n\n        <button ion-button menuToggle icon-only > \n\n          <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n        <ion-title>Favoritos</ion-title>\n\n      </ion-navbar>\n\n    \n\n    </ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\menu\favoritos\favoritos.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], FavoritosPage);
@@ -738,7 +758,7 @@ var SpecialPage = (function () {
 }());
 SpecialPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-special',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\menu\special\special.html"*/'<ion-header>\n\n    \n\n      <ion-navbar color="primary">\n\n        <button ion-button menuToggle icon-only > \n\n          <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n        <ion-title>Explorar</ion-title>\n\n      </ion-navbar>\n\n    \n\n    </ion-header>\n\n<ion-content padding>\n\nsdvosgokegfkmlefm\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\menu\special\special.html"*/,
+        selector: 'page-special',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\menu\special\special.html"*/'<ion-header>\n\n    \n\n      <ion-navbar color="primary">\n\n        <button ion-button menuToggle icon-only > \n\n          <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n        <ion-title>Explorar</ion-title>\n\n      </ion-navbar>\n\n    \n\n    </ion-header>\n\n<ion-content padding>\n\nsdvosgokegfkmlefm\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\menu\special\special.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], SpecialPage);
@@ -780,7 +800,7 @@ var SigninPage = (function () {
         var _this = this;
         this.registrarme.signin(this.email, this.user, this.password).subscribe(function (res) {
             if (res.success) {
-                _this.showToast(res.user.username + ", Te has registrado exitosamente");
+                _this.showToast(" Te has registrado exitosamente");
                 _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__menu_menu__["a" /* MenuPage */]);
             }
             else {
@@ -800,7 +820,7 @@ var SigninPage = (function () {
 }());
 SigninPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-signin',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\signin\signin.html"*/'<ion-header>\n    \n      <ion-navbar color="primary">\n        <ion-title class="Titulo" color = "light"><q>No necesitas suerte, necesitas moverte</q></ion-title>\n      </ion-navbar>\n    \n    </ion-header>\n<ion-content padding class = "login">\n  <ion-card col-md-8 offset-md-2 col-lg-8 offset-lg-2 >\n      <ion-card-header class ="card-header">\n            Registro\n      </ion-card-header>\n    <ion-card-content>\n          <ion-list no-line>\n              <a>Ingresa los siguientes datos:</a>\n              <ion-item>\n                  <ion-input ion-col col-12 col-md-10 col-lg-6 offset-lg-3\n                  type = "text" placeholder = "Email" text-center [(ngModel)] = "email">\n                  </ion-input>\n              </ion-item>\n              <ion-item>\n                <ion-input ion-col col-12 col-md-10 col-lg-6 offset-lg-3\n                type = "text" placeholder = "Username" text-center [(ngModel)]="user"\n                ></ion-input>\n              </ion-item>\n              <ion-item>\n                <ion-input ion-col col-12 col-md-10  col-lg-6 offset-lg-3\n                 type = "password" placeholder = "Password" text-center [(ngModel)]="password"\n                ></ion-input>\n              </ion-item>\n              <ion-item>\n                    <button ion-col col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 ion-button\n                     block color="danger" (click)="signin()">Ingresar datos</button>    \n              </ion-item>\n            </ion-list>\n          </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\signin\signin.html"*/,
+        selector: 'page-signin',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\signin\signin.html"*/'<ion-header>\n    \n      <ion-navbar color="primary">\n        <ion-title class="Titulo" color = "light"><q>No necesitas suerte, necesitas moverte</q></ion-title>\n      </ion-navbar>\n    \n    </ion-header>\n<ion-content padding class = "login">\n  <ion-card col-md-8 offset-md-2 col-lg-8 offset-lg-2 >\n      <ion-card-header class ="card-header">\n            Registro\n      </ion-card-header>\n    <ion-card-content>\n          <ion-list no-line>\n              <a>Ingresa los siguientes datos:</a>\n              <ion-item>\n                  <ion-input ion-col col-12 col-md-10 col-lg-6 offset-lg-3\n                  type = "text" placeholder = "Email" text-center [(ngModel)] = "email">\n                  </ion-input>\n              </ion-item>\n              <ion-item>\n                <ion-input ion-col col-12 col-md-10 col-lg-6 offset-lg-3\n                type = "text" placeholder = "Username" text-center [(ngModel)]="user"\n                ></ion-input>\n              </ion-item>\n              <ion-item>\n                <ion-input ion-col col-12 col-md-10  col-lg-6 offset-lg-3\n                 type = "password" placeholder = "Password" text-center [(ngModel)]="password"\n                ></ion-input>\n              </ion-item>\n              <ion-item>\n                    <button ion-col col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3 ion-button\n                     block color="danger" (click)="signin()">Ingresar datos</button>    \n              </ion-item>\n            </ion-list>\n          </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\signin\signin.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -836,7 +856,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(316);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_storage__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(402);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(106);
@@ -1218,7 +1238,7 @@ webpackContext.id = 369;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1252,7 +1272,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\app\app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
         __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */]])
@@ -1292,7 +1312,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\home\home.html"*/'\n\n<ion-content padding>\n\n  \n\n</ion-content>'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\home\home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\home\home.html"*/'\n\n<ion-content padding>\n\n  \n\n</ion-content>'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\home\home.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], HomePage);
@@ -1331,7 +1351,7 @@ var MensajesPage = (function () {
 }());
 MensajesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-mensajes',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\mensajes\mensajes.html"*/'\n\n<ion-header>\n\n    <ion-navbar>\n\n        <ion-buttons start>\n\n                <button ion-button menuToggle>\n\n                    <ion-icon name = "menu"></ion-icon>\n\n                </button>\n\n            </ion-buttons>\n\n            <ion-title> Explorar</ion-title>\n\n        </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n sdvnsvlssfbzsfr\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles\src\pages\mensajes\mensajes.html"*/,
+        selector: 'page-mensajes',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\mensajes\mensajes.html"*/'\n\n<ion-header>\n\n    <ion-navbar>\n\n        <ion-buttons start>\n\n                <button ion-button menuToggle>\n\n                    <ion-icon name = "menu"></ion-icon>\n\n                </button>\n\n            </ion-buttons>\n\n            <ion-title> Explorar</ion-title>\n\n        </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n sdvnsvlssfbzsfr\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\mensajes\mensajes.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], MensajesPage);
@@ -1412,6 +1432,51 @@ DatabaseConnectionProvider = __decorate([
 ], DatabaseConnectionProvider);
 
 //# sourceMappingURL=database-connection.js.map
+
+/***/ }),
+
+/***/ 425:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DetallePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(11);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the DetallePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var DetallePage = (function () {
+    function DetallePage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    DetallePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad DetallePage');
+    };
+    return DetallePage;
+}());
+DetallePage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-detalle',template:/*ion-inline-start:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\detalle\detalle.html"*/'<!--\n  Generated template for the DetallePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>detalle</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Sebastian\Desktop\ProyectoIonic\IonicAppMoviles - copia\src\pages\detalle\detalle.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+], DetallePage);
+
+//# sourceMappingURL=detalle.js.map
 
 /***/ })
 

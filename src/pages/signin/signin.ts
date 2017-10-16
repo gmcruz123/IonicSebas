@@ -17,11 +17,10 @@ export class SigninPage {
               public registrarme: RegistroProvider,
               public toastCtrl: ToastController) {
   }
-
   signin(){
     this.registrarme.signin(this.email, this.user, this.password).subscribe(res =>{
         if (res.success){
-          this.showToast(res.user.username + ", Te has registrado exitosamente");
+          this.showToast(" Te has registrado exitosamente");
           this.navCtrl.push(MenuPage);
         }else{
           this.showToast("Usuario no se ha podido registrar");
