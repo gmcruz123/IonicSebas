@@ -18,7 +18,7 @@ export class DetallePage {
               public reservar: ReservasProvider,
               public toastCtrl: ToastController,
               public guardar: Storage) {
-              this.destino = new Destinos("","",0,0,"","" );
+              this.destino = new Destinos("","","",0,0,"","" );
   }
 
   save() {
