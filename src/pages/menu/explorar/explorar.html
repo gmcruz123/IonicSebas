@@ -16,7 +16,7 @@
                 </ion-refresher-content>
             </ion-refresher>
     
-    <ion-col col-12 col-md-6 col-lg-4 *ngFor = "let d of data">
+    <ion-col col-12 col-md-6 col-lg-4 *ngFor = "let d of data ;  let i = index">
         <ion-card>
               <img src = "{{d.imagen}}" alt = "">
               <ion-card-content>
@@ -24,7 +24,7 @@
                     <div><ion-icon name="logo-usd"></ion-icon> Precio: {{d.precio}}</div>
                     <div><ion-icon name="people"></ion-icon> Me gusta: {{d.visitantes}}</div>
       
-                           <button ion-button icon-only (click) = "detalle()" full>
+                           <button ion-button icon-only (click) = "detalle(i)" full>
                               <ion-icon menu="search"></ion-icon>
                                Reservar
                            </button>

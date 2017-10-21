@@ -17,10 +17,11 @@ import { ExplorarPage } from '../pages/menu/explorar/explorar';
 import { SpecialPage } from '../pages/menu/special/special';
 import { MensajesPage } from '../pages/mensajes/mensajes';
 import { FavoritosPage } from '../pages/menu/favoritos/favoritos';
-import { ReservasPage } from '../pages/reservas/reservas';
+import { ReservasPage } from '../pages/reservaciones/reservaciones';
 import { PerfilPage } from '../pages/menu/perfil/perfil';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { MenuPage } from '../pages/menu/menu';
+import { DetallePage } from '../pages/detalle/detalle';
 
 import { RegistroProvider } from '../providers/registro/registro';
 import { ReservasProvider } from '../providers/reservas/reservas';
@@ -42,7 +43,8 @@ import { DatabaseConnectionProvider } from '../providers/database-connection/dat
     ExplorarPage,
     ReservasPage,
     SpecialPage,
-    SigninPage
+    SigninPage,
+    DetallePage
   ],
   imports: [
     HttpClientModule,
@@ -66,7 +68,8 @@ import { DatabaseConnectionProvider } from '../providers/database-connection/dat
     CalendarPage,
     MenuPage,
     SpecialPage,
-    SigninPage
+    SigninPage,
+    DetallePage
   ],
   providers: [
     StatusBar,

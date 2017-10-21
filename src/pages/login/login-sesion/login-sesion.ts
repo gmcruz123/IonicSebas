@@ -38,7 +38,7 @@ export class LoginSesionPage {
       loading.dismiss();
       this.navCtrl.push(MenuPage);
       //Almacenamos localmente el identificador del usuario en sesión
-      this.guardar.set('identificacion', res.user._id);
+      this.guardar.set("identificacion", res.user._id)+"";
     } else {
       this.showToast("Usuario no encontrado");
       loading.dismiss();

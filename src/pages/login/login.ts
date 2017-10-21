@@ -17,7 +17,9 @@ export class LoginPage {
   login() {
     this.navCtrl.push(LoginSesionPage);
   }
-  Facebookin(){}
+  Facebookin(){
+    
+  }
   signin(){
     this.navCtrl.push(SigninPage);
   }

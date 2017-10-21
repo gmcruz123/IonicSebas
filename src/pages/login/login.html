@@ -18,6 +18,25 @@
                                 <ion-icon name ="logo-facebook" (click)="Facebookin()"> 
                                 </ion-icon> Login con Facebook
                         </button> 
+                        <script>
+                          window.fbAsyncInit = function() {
+                            FB.init({
+                              appId      : '124542488250174',
+                              cookie     : true,
+                              xfbml      : true,
+                              version    : '1.8.0_144'
+                            });
+                            FB.AppEvents.logPageView();   
+                          };
+                        // Cargamos el sdk de forma asíncrona
+                          (function(d, s, id){
+                             var js, fjs = d.getElementsByTagName(s)[0];
+                             if (d.getElementById(id)) {return;}
+                             js = d.createElement(s); js.id = id;
+                             js.src = "//connect.facebook.net/en_US/sdk.js";
+                             fjs.parentNode.insertBefore(js, fjs);
+                           }(document, 'script', 'facebook-jssdk'));
+                        </script>
                         <br>
                         <button  ion-col col-12 col-md-10 offset-md-1  col-lg-6 offset-lg-3
                                 ion-button block color="danger" (click)="login()">Inicia Sesión

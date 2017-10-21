@@ -1,0 +1,29 @@
+<ion-header>    
+    <ion-navbar color="primary">
+      <button ion-button menuToggle icon-only > 
+        <ion-icon name="menu"></ion-icon>
+        </button>
+      <ion-title>Reservaciones</ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+  <!-- <ion-searchbar>Buscar</ion-searchbar> -->
+
+          <ion-refresher (ionRefresh) = "doRefresh($event)">
+              <ion-refresher-content>
+                  pullingText = "Desliza para recargar"
+                  refreshText = "Recargando ..."
+              </ion-refresher-content>
+          </ion-refresher>
+  
+  <ion-col col-12 col-md-6 col-lg-4 *ngFor = "let d of data ;  let i = index">
+      <ion-card>
+            <ion-card-content>
+                  <div><ion-icon name="contract"></ion-icon> Ocasión: {{d.nombre}}</div>
+                  <div><ion-icon name="people"></ion-icon> Numero de Personas: {{d.NumPersonas}}</div>
+                  <div><ion-icon name="calendar"></ion-icon> Fecha de viaje: {{d.fecha}}</div>
+                </ion-card-content>
+      </ion-card>   
+  </ion-col>  
+</ion-content> 
+          

@@ -1,27 +1,25 @@
 <ion-header>
-  
+
     <ion-navbar color="primary">
       <ion-title>Agregar Reservacion</ion-title>
     </ion-navbar>
   
   </ion-header>
-  
-  
-  <ion-content padding>
-    <form #form="ngForm">
-  
+    
+  <ion-content padding class = "login-bg">
+    <form #form="ngForm" col-12 col-md-6 offset-md-6 >
+      <ion-item>
+        <ion-label floating>Entidad </ion-label>
+        <ion-input name="nombre" type="text" [(ngModel)]="dataDestino.nombre" required></ion-input>
+      </ion-item>
       <ion-item>
         <ion-label floating>Numero de personas</ion-label>
-        <ion-input name="visitantes" type="number" [(ngModel)]="destino.visitantes" required></ion-input>
+        <ion-input name="NumPersonas" type="number" [(ngModel)]="dataDestino.NumPersonas" required></ion-input>
       </ion-item>
-  
-      <!-- <ion-item margin-bottom>
-        <ion-label floating>Fecha</ion-label>
-        <ion-input name="Date" type="Date" [(ngModel)]="destino.Date" required></ion-input>
-      </ion-item> -->
-
-  
+      <ion-item>  
+        <ion-label>Fecha</ion-label>
+        <ion-input name="fecha" type="Date" [(ngModel)]="dataDestino.fecha" required></ion-input>
+      </ion-item>
       <button ion-button block full margin-top (click)="save()" [disabled]="!form.valid"> Guardar </button>
-  
     </form>
   </ion-content>

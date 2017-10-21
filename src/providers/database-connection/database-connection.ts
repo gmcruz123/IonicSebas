@@ -10,7 +10,7 @@ export class DatabaseConnectionProvider {
 
     }
 
-    getConnection(): Promise<SQLiteObject> {
+    getConnection(): Promise<SQLiteObject>{
         const sqlite = new SQLite();
         if(this.db){
           return Promise.resolve(this.db);
