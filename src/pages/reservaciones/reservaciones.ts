@@ -29,7 +29,7 @@ loadReservas(refresher = null){
       console.log("4. id usuario desde reservaciones.ts: " + id)
       this.service.MostrarReservas(id).subscribe(res =>{
         this.data = res; 
-        console.log("5. Aquí deberian mostrarse las reservas de usuario")
+        console.log("5. Aquí deberian mostrarse las reservas de usuario"+this.data)
         if(refresher != null) refresher.complete();
     });
   })
